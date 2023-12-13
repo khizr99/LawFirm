@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<% layout('layouts/boilerplate') %>
+
+    <div class="row">
+        <h1 class="text-center">Apply to BrookLaw</h1>
+        <div class="col-md-6 offset-md-3">
+            <form action="/lawfirms" method="POST" novalidate class="validate-form" enctype="multipart/form-data">
+
+                <div class="row ">
+                    <div class="mb-3 col-sm-6">
+                        <label class="form-label" for="Name">Name</label>
+                        <input type="text" class="form-control" id="Name" placeholder="Name"
+                            name="lawfirm[name]" required>
+                        <div class="valid-feedback">Looks good!</div>   
+                    </div>
+                    <div class="mb-3 col-sm-6">
+                        <label class="form-label" for="title">Title</label>
+                        <input type="text" class="form-control" id="title" placeholder="Title"
+                            name="lawfirm[title]" required>
+                            <div class="valid-feedback">Looks good!</div> 
+                    </div>
+                </div>
+                <!-- <div class="mb-3 ">
+                    <label class="form-label" for="image">Image Url</label>
+                    <input type="text" class="form-control" id="image" placeholder="Image"
+                        name="lawfirm[image]" required>
+                        <div class="valid-feedback">Looks good!</div> 
+                </div> -->
+                <!-- <input type="file" name="image" id="" multiple> -->
+            <div class="mb-3">
+                <label class="form-label" for="location">Location</label>
+                <input type="text" class="form-control" id="location" placeholder="Location"
+                 name="lawfirm[location]" required>
+                <div class="valid-feedback">Looks good!</div>  
+            </div>
+
+                <div class="mb-3 ">
+                    <label class="form-label" for="description">Description</label>
+                    <textarea type="text" class="form-control" id="description" placeholder="Description"
+                        name="lawfirm[description]" required></textarea>
+                        <div class="valid-feedback">Looks good!</div> 
+                </div>
+
+                <div class=" mb-3 custom-file">
+                    <label for="image" class="form-label">Choose Images</label>
+                    <input class="form-control" type="file" id="image" name="image" multiple>
+                    <label for="image" class="custom-file-label text-muted"></label>
+                  </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-success">Add People</button>
+                </div>
+
+            </form>
+            <a href="/lawfirms">All BrookLaw People</a>
+        </div>
+    </div>
+
